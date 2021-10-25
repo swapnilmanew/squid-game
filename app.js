@@ -55,7 +55,7 @@ const characters = [
       "https://media.thetab.com/blogs.dir/90/files/2021/09/squidtheory-1024x536.jpg",
   },
 ];
-
+const button = document.getElementById("button");
 var sound = new Audio("squid-game.mp3");
 setTimeout(() => {}, 100);
 
@@ -77,11 +77,12 @@ button.addEventListener("click", (e) => {
       let img = characters[randomNumber].image;
       document.getElementById("spinner").classList.add("d-none");
       document.getElementById("box").classList.remove("d-none");
-      const button = document.getElementById("button");
+      
       const image = document.getElementById("image");
       const charName = document.getElementById("name");
       image.src = img;
       charName.innerHTML = char;
+      button.classList.add("d-none");
     }, 2000);
   }
 });
